@@ -1,0 +1,57 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "6cd98d89c161a135facd0a11aad1393a"
+name = "test2-app"
+handle = "test2-app-21"
+application_url = "https://necessarily-yourself-fewer-operator.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "test-lighthouseml.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://example.com/api/auth",
+  "https://solve-pennsylvania-moisture-hammer.trycloudflare.com/auth/callback",
+  "https://solve-pennsylvania-moisture-hammer.trycloudflare.com/auth/shopify/callback",
+  "https://solve-pennsylvania-moisture-hammer.trycloudflare.com/api/auth/callback",
+  "https://angels-magic-myrtle-midi.trycloudflare.com/auth/callback",
+  "https://angels-magic-myrtle-midi.trycloudflare.com/auth/shopify/callback",
+  "https://angels-magic-myrtle-midi.trycloudflare.com/api/auth/callback",
+  "https://fun-blind-shift-mart.trycloudflare.com/auth/callback",
+  "https://fun-blind-shift-mart.trycloudflare.com/auth/shopify/callback",
+  "https://fun-blind-shift-mart.trycloudflare.com/api/auth/callback",
+  "https://abu-rob-boulder-ranch.trycloudflare.com/auth/callback",
+  "https://abu-rob-boulder-ranch.trycloudflare.com/auth/shopify/callback",
+  "https://abu-rob-boulder-ranch.trycloudflare.com/api/auth/callback",
+  "https://necessarily-yourself-fewer-operator.trycloudflare.com/auth/callback",
+  "https://necessarily-yourself-fewer-operator.trycloudflare.com/auth/shopify/callback",
+  "https://necessarily-yourself-fewer-operator.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/data_request" ]
+  uri = "/webhooks/customers/data_request"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/redact" ]
+  uri = "/webhooks/customers/redact"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "shop/redact" ]
+  uri = "/webhooks/shop/redact"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
